@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="uygarModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="bill">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="companyName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="price" Type="double" Nullable="false" />
+          <Property Name="customerName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="customerPhoneNumber" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="point" Type="double" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="campaign">
+          <Key>
+            <PropertyRef Name="campaignID" />
+          </Key>
+          <Property Name="TravelCompany_name" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="originCity" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="destinationCity" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="date" Type="date" Nullable="false" />
+          <Property Name="estimatedTimeOfArrival" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="capacity" Type="int" Nullable="false" />
+          <Property Name="price" Type="double" Nullable="false" />
+          <Property Name="campaignID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hotel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="pointCoefficent" Type="double" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="roomNo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hotelreservation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Hotel_id" Type="int" Nullable="false" />
+          <Property Name="startDate" Type="date" Nullable="false" />
+          <Property Name="finishDate" Type="date" Nullable="false" />
+          <Property Name="price" Type="double" Nullable="false" />
+          <Property Name="Bill_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="location">
+          <Key>
+            <PropertyRef Name="locationID" />
+          </Key>
+          <Property Name="Hotel_id" Type="int" Nullable="false" />
+          <Property Name="city" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="locationID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="transportationservice">
+          <Key>
+            <PropertyRef Name="transportationID" />
+          </Key>
+          <Property Name="Bill_id" Type="int" Nullable="false" />
+          <Property Name="Campaign_campaignID" Type="int" Nullable="false" />
+          <Property Name="transportationID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="travelcompany">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="name" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="pointCoefficient" Type="double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="uuser">
+          <Key>
+            <PropertyRef Name="userName" />
+          </Key>
+          <Property Name="userName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="uygarModelStoreContainer">
+          <EntitySet Name="bill" EntityType="Self.bill" Schema="uygar" store:Type="Tables" />
+          <EntitySet Name="campaign" EntityType="Self.campaign" Schema="uygar" store:Type="Tables" />
+          <EntitySet Name="hotel" EntityType="Self.hotel" Schema="uygar" store:Type="Tables" />
+          <EntitySet Name="hotelreservation" EntityType="Self.hotelreservation" Schema="uygar" store:Type="Tables" />
+          <EntitySet Name="location" EntityType="Self.location" Schema="uygar" store:Type="Tables" />
+          <EntitySet Name="transportationservice" EntityType="Self.transportationservice" Schema="uygar" store:Type="Tables" />
+          <EntitySet Name="travelcompany" EntityType="Self.travelcompany" Schema="uygar" store:Type="Tables" />
+          <EntitySet Name="uuser" EntityType="Self.uuser" Schema="uygar" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="uygarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="bill">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="companyName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <Property Name="customerName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="customerPhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="point" Type="Double" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="campaign">
+          <Key>
+            <PropertyRef Name="campaignID" />
+          </Key>
+          <Property Name="TravelCompany_name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="originCity" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="destinationCity" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="date" Type="DateTime" Nullable="false" />
+          <Property Name="estimatedTimeOfArrival" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="capacity" Type="Int32" Nullable="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <Property Name="campaignID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hotel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pointCoefficent" Type="Double" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="roomNo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hotelreservation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Hotel_id" Type="Int32" Nullable="false" />
+          <Property Name="startDate" Type="DateTime" Nullable="false" />
+          <Property Name="finishDate" Type="DateTime" Nullable="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <Property Name="Bill_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="location">
+          <Key>
+            <PropertyRef Name="locationID" />
+          </Key>
+          <Property Name="Hotel_id" Type="Int32" Nullable="false" />
+          <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="locationID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="transportationservice">
+          <Key>
+            <PropertyRef Name="transportationID" />
+          </Key>
+          <Property Name="Bill_id" Type="Int32" Nullable="false" />
+          <Property Name="Campaign_campaignID" Type="Int32" Nullable="false" />
+          <Property Name="transportationID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="travelcompany">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pointCoefficient" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="uuser">
+          <Key>
+            <PropertyRef Name="userName" />
+          </Key>
+          <Property Name="userName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="uygarEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="bill" EntityType="Self.bill" />
+          <EntitySet Name="campaign" EntityType="Self.campaign" />
+          <EntitySet Name="hotel" EntityType="Self.hotel" />
+          <EntitySet Name="hotelreservation" EntityType="Self.hotelreservation" />
+          <EntitySet Name="location" EntityType="Self.location" />
+          <EntitySet Name="transportationservice" EntityType="Self.transportationservice" />
+          <EntitySet Name="travelcompany" EntityType="Self.travelcompany" />
+          <EntitySet Name="uuser" EntityType="Self.uuser" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="uygarModelStoreContainer" CdmEntityContainer="uygarEntities">
+          <EntitySetMapping Name="bill">
+            <EntityTypeMapping TypeName="uygarModel.bill">
+              <MappingFragment StoreEntitySet="bill">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="customerName" ColumnName="customerName" />
+                <ScalarProperty Name="customerPhoneNumber" ColumnName="customerPhoneNumber" />
+                <ScalarProperty Name="point" ColumnName="point" />
+                <ScalarProperty Name="type" ColumnName="type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="campaign">
+            <EntityTypeMapping TypeName="uygarModel.campaign">
+              <MappingFragment StoreEntitySet="campaign">
+                <ScalarProperty Name="TravelCompany_name" ColumnName="TravelCompany_name" />
+                <ScalarProperty Name="originCity" ColumnName="originCity" />
+                <ScalarProperty Name="destinationCity" ColumnName="destinationCity" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="estimatedTimeOfArrival" ColumnName="estimatedTimeOfArrival" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="campaignID" ColumnName="campaignID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hotel">
+            <EntityTypeMapping TypeName="uygarModel.hotel">
+              <MappingFragment StoreEntitySet="hotel">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="pointCoefficent" ColumnName="pointCoefficent" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="roomNo" ColumnName="roomNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hotelreservation">
+            <EntityTypeMapping TypeName="uygarModel.hotelreservation">
+              <MappingFragment StoreEntitySet="hotelreservation">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Hotel_id" ColumnName="Hotel_id" />
+                <ScalarProperty Name="startDate" ColumnName="startDate" />
+                <ScalarProperty Name="finishDate" ColumnName="finishDate" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="Bill_id" ColumnName="Bill_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="location">
+            <EntityTypeMapping TypeName="uygarModel.location">
+              <MappingFragment StoreEntitySet="location">
+                <ScalarProperty Name="Hotel_id" ColumnName="Hotel_id" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="locationID" ColumnName="locationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="transportationservice">
+            <EntityTypeMapping TypeName="uygarModel.transportationservice">
+              <MappingFragment StoreEntitySet="transportationservice">
+                <ScalarProperty Name="Bill_id" ColumnName="Bill_id" />
+                <ScalarProperty Name="Campaign_campaignID" ColumnName="Campaign_campaignID" />
+                <ScalarProperty Name="transportationID" ColumnName="transportationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="travelcompany">
+            <EntityTypeMapping TypeName="uygarModel.travelcompany">
+              <MappingFragment StoreEntitySet="travelcompany">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="pointCoefficient" ColumnName="pointCoefficient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="uuser">
+            <EntityTypeMapping TypeName="uygarModel.uuser">
+              <MappingFragment StoreEntitySet="uuser">
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="type" ColumnName="type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
