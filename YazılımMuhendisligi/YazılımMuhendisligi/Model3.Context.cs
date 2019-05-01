@@ -33,5 +33,6 @@ namespace YazılımMuhendisligi
         public DbSet<transportationservice> transportationservice { get; set; }
         public DbSet<travelcompany> travelcompany { get; set; }
         public DbSet<uuser> uuser { get; set; }
+        public DbSet<session> session { get; set; }
     }
 }

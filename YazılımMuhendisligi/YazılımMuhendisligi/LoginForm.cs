@@ -27,7 +27,8 @@ namespace YazılımMuhendisligi
             DialogResult result = MessageBox.Show(message, title, buttons);
             if (result == DialogResult.Yes)
             {
-                System.Windows.Forms.Application.Exit();
+                Program.ses.exit();
+                Application.Exit();
             }
         }
 
@@ -36,8 +37,13 @@ namespace YazılımMuhendisligi
             String un = username.Text;
             String passw = password.Text;
             Image img;
-            Boolean isValid = un.Equals("uygar");
-            if (isValid){
+            var qry = from r in Program.ctx.uuser
+                      where r.userName == un && r.password == passw
+                      select r;
+            var isValid = qry.FirstOrDefault();
+
+            //MessageBox.Show(isValid.type);
+            if (isValid != null){
                 img = new Bitmap(Properties.Resources.login_green);
                 login_warn.Visible = false;
             }
@@ -47,7 +53,7 @@ namespace YazılımMuhendisligi
                 login_warn.Visible = true;
             }
             this.BackgroundImage = img;
-            if (isValid){
+            if (isValid != null){
                 //MessageBox.Show("username: " + un + "\npassword: " + passw, "aasd");
                 System.Threading.Thread.Sleep(100);
 
