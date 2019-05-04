@@ -56,6 +56,9 @@ namespace YazılımMuhendisligi
             if (isValid != null){
                 //MessageBox.Show("username: " + un + "\npassword: " + passw, "aasd");
                 System.Threading.Thread.Sleep(100);
+                Hide();
+                AG_Panel pn = new AG_Panel();
+                pn.Show();
 
             }
         }

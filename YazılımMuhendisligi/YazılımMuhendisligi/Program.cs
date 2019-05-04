@@ -7,9 +7,14 @@ using System.Windows.Forms;
 
 namespace YazılımMuhendisligi
 {
+   
     static class Program
     {
-        public static uygarEntities ctx = new uygarEntities();
+        private static void OnApplicationExit(object sender, EventArgs e)
+        {
+            Program.ses.exit();
+        }
+        public static uygarEntities1 ctx = new uygarEntities1();
         public static MySession ses = new MySession();
         /// <summary>
         /// Uygulamanın ana girdi noktası.
@@ -21,6 +26,8 @@ namespace YazılımMuhendisligi
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            Application.ApplicationExit += new EventHandler(OnApplicationExit);
 
             /* var ctx = new uygarEntities();
 
@@ -51,5 +58,6 @@ namespace YazılımMuhendisligi
             Application.Run(new LoginForm());
        
         }
+       
     }
 }

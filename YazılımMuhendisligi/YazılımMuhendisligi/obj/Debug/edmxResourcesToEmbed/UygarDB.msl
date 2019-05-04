@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="uygarModelStoreContainer" CdmEntityContainer="uygarEntities1">
+    <EntitySetMapping Name="bill">
+      <EntityTypeMapping TypeName="uygarModel.bill">
+        <MappingFragment StoreEntitySet="bill">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="customerName" ColumnName="customerName" />
+          <ScalarProperty Name="customerPhoneNumber" ColumnName="customerPhoneNumber" />
+          <ScalarProperty Name="point" ColumnName="point" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="campaign">
+      <EntityTypeMapping TypeName="uygarModel.campaign">
+        <MappingFragment StoreEntitySet="campaign">
+          <ScalarProperty Name="TravelCompany_name" ColumnName="TravelCompany_name" />
+          <ScalarProperty Name="originCity" ColumnName="originCity" />
+          <ScalarProperty Name="destinationCity" ColumnName="destinationCity" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="estimatedTimeOfArrival" ColumnName="estimatedTimeOfArrival" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="campaignID" ColumnName="campaignID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hotel">
+      <EntityTypeMapping TypeName="uygarModel.hotel">
+        <MappingFragment StoreEntitySet="hotel">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="pointCoefficent" ColumnName="pointCoefficent" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="roomNo" ColumnName="roomNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hotelreservation">
+      <EntityTypeMapping TypeName="uygarModel.hotelreservation">
+        <MappingFragment StoreEntitySet="hotelreservation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Hotel_id" ColumnName="Hotel_id" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="finishDate" ColumnName="finishDate" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="Bill_id" ColumnName="Bill_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="location">
+      <EntityTypeMapping TypeName="uygarModel.location">
+        <MappingFragment StoreEntitySet="location">
+          <ScalarProperty Name="Hotel_id" ColumnName="Hotel_id" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="locationID" ColumnName="locationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="session">
+      <EntityTypeMapping TypeName="uygarModel.session">
+        <MappingFragment StoreEntitySet="session">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transportationservice">
+      <EntityTypeMapping TypeName="uygarModel.transportationservice">
+        <MappingFragment StoreEntitySet="transportationservice">
+          <ScalarProperty Name="Bill_id" ColumnName="Bill_id" />
+          <ScalarProperty Name="Campaign_campaignID" ColumnName="Campaign_campaignID" />
+          <ScalarProperty Name="transportationID" ColumnName="transportationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="travelcompany">
+      <EntityTypeMapping TypeName="uygarModel.travelcompany">
+        <MappingFragment StoreEntitySet="travelcompany">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="pointCoefficient" ColumnName="pointCoefficient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uuser">
+      <EntityTypeMapping TypeName="uygarModel.uuser">
+        <MappingFragment StoreEntitySet="uuser">
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

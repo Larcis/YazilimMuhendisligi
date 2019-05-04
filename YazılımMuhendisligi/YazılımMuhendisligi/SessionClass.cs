@@ -11,9 +11,15 @@ namespace YazılımMuhendisligi
         public MySession() {}
         public void exit()
         {
-            var res = Program.ctx.session.SingleOrDefault(b => b.id == 0);
-            res.isActive = false;
-            Program.ctx.SaveChanges();
+            try
+            {
+                var res = Program.ctx.session.SingleOrDefault(b => b.id == 0);
+                res.isActive = false;
+                Program.ctx.SaveChanges();
+            }
+            catch (Exception) {
+              
+            }
         }
         public bool getInstance()
         {
@@ -25,7 +31,7 @@ namespace YazılımMuhendisligi
                 res = qry.FirstOrDefault();
                 ret = res.isActive;
             }
-            catch (Exception e)
+           catch (Exception e)
             {
                 System.Windows.Forms.MessageBox.Show("Db açık değil. " + e.Message);
                 Environment.Exit(1);

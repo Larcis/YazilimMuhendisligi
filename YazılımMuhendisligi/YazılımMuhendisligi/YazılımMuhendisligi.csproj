@@ -41,16 +41,15 @@
     </Reference>
     <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.12\Assemblies\v4.5\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.12\Assemblies\v4.5\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data.Entity.EF6, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.12\Assemblies\v4.5\MySql.Data.Entity.EF6.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.12\Assemblies\v4.5\MySql.Data.Entity.EF6.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -66,23 +65,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bill.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+    <Compile Include="AG_Panel.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Campaign.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+    <Compile Include="AG_Panel.Designer.cs">
+      <DependentUpon>AG_Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bill.cs">
+      <DependentUpon>UygarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="campaign.cs">
+      <DependentUpon>UygarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ContactInfo.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="hotel.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>UygarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="hotelreservation.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>UygarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Informer.cs" />
     <Compile Include="location.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>UygarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -90,44 +95,47 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model3.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Model3.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model3.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model3.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model3.tt</DependentUpon>
-    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Property.cs" />
     <Compile Include="Receipt.cs" />
     <Compile Include="session.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>UygarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="SessionClass.cs" />
     <Compile Include="Ticket.cs" />
-    <Compile Include="TransportationService.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+    <Compile Include="transportationservice.cs">
+      <DependentUpon>UygarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="TransportService.cs" />
     <Compile Include="TravelComp.cs" />
-    <Compile Include="TravelCompany.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+    <Compile Include="travelcompany.cs">
+      <DependentUpon>UygarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="uuser.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>UygarDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="UygarDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UygarDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UygarDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UygarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UygarDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UygarDB.edmx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AG_Panel.resx">
+      <DependentUpon>AG_Panel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,11 +149,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Model3.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model3.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="packages.config" />
+    <None Include="Properties\DataSources\campaign.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,24 +159,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="UygarDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UygarDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="UygarDB.edmx.diagram">
+      <DependentUpon>UygarDB.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model3.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model3.Context.cs</LastGenOutput>
-      <DependentUpon>Model3.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model3.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model3.cs</LastGenOutput>
-      <DependentUpon>Model3.edmx</DependentUpon>
-    </Content>
     <Content Include="Properties\login_green.png" />
     <Content Include="Properties\login_red.png" />
     <Content Include="Properties\login_yellow.png" />
+    <Content Include="UygarDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UygarDB.edmx</DependentUpon>
+      <LastGenOutput>UygarDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="UygarDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UygarDB.edmx</DependentUpon>
+      <LastGenOutput>UygarDB.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

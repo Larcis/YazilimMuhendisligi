@@ -24,12 +24,10 @@ C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\Yazılım
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\EntityFramework.dll
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\MySql.Data.dll
-C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\MySql.Data.Entity.EF6.dll
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\System.Data.dll
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\EntityFramework.xml
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\MySql.Data.xml
-C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\MySql.Data.Entity.EF6.xml
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\obj\Debug\YazılımMuhendisligi.csprojAssemblyReference.cache
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\obj\Debug\YazılımMuhendisligi.LoginForm.resources
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\obj\Debug\YazılımMuhendisligi.Properties.Resources.resources
@@ -38,3 +36,6 @@ C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\Yazılım
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\obj\Debug\YazılımMuhendisligi.csproj.CopyComplete
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\obj\Debug\YazılımMuhendisligi.exe
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\obj\Debug\YazılımMuhendisligi.pdb
+C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\obj\Debug\YazılımMuhendisligi.AG_Panel.resources
+C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\MySql.Data.Entity.EF6.xml

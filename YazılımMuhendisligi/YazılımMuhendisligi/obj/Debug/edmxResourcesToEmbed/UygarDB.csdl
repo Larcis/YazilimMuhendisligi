@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="uygarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="bill">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="companyName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="price" Type="Double" Nullable="false" />
+    <Property Name="customerName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="customerPhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="point" Type="Double" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="campaign">
+    <Key>
+      <PropertyRef Name="campaignID" />
+    </Key>
+    <Property Name="TravelCompany_name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="originCity" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="destinationCity" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" />
+    <Property Name="estimatedTimeOfArrival" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="capacity" Type="Int32" Nullable="false" />
+    <Property Name="price" Type="Double" Nullable="false" />
+    <Property Name="campaignID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hotel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pointCoefficent" Type="Double" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="roomNo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hotelreservation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Hotel_id" Type="Int32" Nullable="false" />
+    <Property Name="startDate" Type="DateTime" Nullable="false" />
+    <Property Name="finishDate" Type="DateTime" Nullable="false" />
+    <Property Name="price" Type="Double" Nullable="false" />
+    <Property Name="Bill_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="location">
+    <Key>
+      <PropertyRef Name="locationID" />
+    </Key>
+    <Property Name="Hotel_id" Type="Int32" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="locationID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="session">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="isActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="transportationservice">
+    <Key>
+      <PropertyRef Name="transportationID" />
+    </Key>
+    <Property Name="Bill_id" Type="Int32" Nullable="false" />
+    <Property Name="Campaign_campaignID" Type="Int32" Nullable="false" />
+    <Property Name="transportationID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="travelcompany">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pointCoefficient" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="uuser">
+    <Key>
+      <PropertyRef Name="userName" />
+    </Key>
+    <Property Name="userName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="uygarEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bill" EntityType="Self.bill" />
+    <EntitySet Name="campaign" EntityType="Self.campaign" />
+    <EntitySet Name="hotel" EntityType="Self.hotel" />
+    <EntitySet Name="hotelreservation" EntityType="Self.hotelreservation" />
+    <EntitySet Name="location" EntityType="Self.location" />
+    <EntitySet Name="session" EntityType="Self.session" />
+    <EntitySet Name="transportationservice" EntityType="Self.transportationservice" />
+    <EntitySet Name="travelcompany" EntityType="Self.travelcompany" />
+    <EntitySet Name="uuser" EntityType="Self.uuser" />
+  </EntityContainer>
+</Schema>
