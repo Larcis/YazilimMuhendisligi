@@ -39,6 +39,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="IronPdf, Version=5.2.0.22321, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPdf.5.2.0.1\lib\net40\IronPdf.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.12\Assemblies\v4.5\MySql.Data.dll</HintPath>
@@ -52,6 +55,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,6 +82,12 @@
       <DependentUpon>UygarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ContactInfo.cs" />
+    <Compile Include="CustInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustInfo.Designer.cs">
+      <DependentUpon>CustInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="hotel.cs">
       <DependentUpon>UygarDB.tt</DependentUpon>
@@ -133,8 +143,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UygarDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="YSP_Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YSP_Panel.Designer.cs">
+      <DependentUpon>YSP_Panel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AG_Panel.resx">
       <DependentUpon>AG_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustInfo.resx">
+      <DependentUpon>CustInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -149,6 +168,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="YSP_Panel.resx">
+      <DependentUpon>YSP_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\campaign.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

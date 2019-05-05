@@ -39,3 +39,7 @@ C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\Yazılım
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\obj\Debug\YazılımMuhendisligi.AG_Panel.resources
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\MySql.Data.Entity.EF6.dll
 C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\MySql.Data.Entity.EF6.xml
+C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\obj\Debug\YazılımMuhendisligi.CustInfo.resources
+C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\IronPdf.dll
+C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\bin\Debug\IronPdf.xml
+C:\Users\UYGARKÖROĞLU\source\repos\github_repo\YazılımMuhendisligi\YazılımMuhendisligi\obj\Debug\YazılımMuhendisligi.YSP_Panel.resources

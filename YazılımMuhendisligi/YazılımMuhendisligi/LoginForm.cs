@@ -57,8 +57,16 @@ namespace YazılımMuhendisligi
                 //MessageBox.Show("username: " + un + "\npassword: " + passw, "aasd");
                 System.Threading.Thread.Sleep(100);
                 Hide();
-                AG_Panel pn = new AG_Panel();
-                pn.Show();
+                //TODO: ag mi ysp mi
+                if (isValid.type.Equals("YSP"))
+                {
+                    (new YSP_Panel()).Show();
+                }
+                else
+                {
+                     (new AG_Panel()).Show();
+                }
+              
 
             }
         }

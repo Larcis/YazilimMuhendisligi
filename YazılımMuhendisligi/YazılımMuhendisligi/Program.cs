@@ -52,12 +52,15 @@ namespace YazılımMuhendisligi
              ctx.SaveChanges();*/
             if (ses.getInstance())
             {
-                MessageBox.Show("İstemci zaten açık!");
+                MessageBox.Show("A Client already opened!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Environment.Exit(1);
             }
+
+            //TODO: Test sonrası loginform acilacak
             Application.Run(new LoginForm());
-       
+            //Application.Run(new AG_Panel());
+            //Application.Run(new YSP_Panel());
         }
-       
+
     }
 }

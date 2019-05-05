@@ -33,7 +33,7 @@ namespace YazılımMuhendisligi
             }
            catch (Exception e)
             {
-                System.Windows.Forms.MessageBox.Show("Db açık değil. " + e.Message);
+                System.Windows.Forms.MessageBox.Show("Couldn't connect database! "+e.Message, "Warning!", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Warning);
                 Environment.Exit(1);
             }
             if (!res.isActive)
