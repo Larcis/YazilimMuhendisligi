@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 06 May 2019, 10:20:21
+-- Üretim Zamanı: 06 May 2019, 10:44:55
 -- Sunucu sürümü: 10.1.38-MariaDB
 -- PHP Sürümü: 7.3.4
 
@@ -249,8 +249,8 @@ CREATE TABLE `travelcompany` (
 
 INSERT INTO `travelcompany` (`name`, `pointCoefficient`) VALUES
 ('Devlet Demir Yolları', 1),
-('Uçan Türk özel havayolu', 1),
 ('Metro', 1),
+('Uçan Türk özel havayolu', 1),
 ('YTUR', 1);
 
 -- --------------------------------------------------------
@@ -287,7 +287,8 @@ ALTER TABLE `bill`
 -- Tablo için indeksler `campaign`
 --
 ALTER TABLE `campaign`
-  ADD PRIMARY KEY (`campaignID`);
+  ADD PRIMARY KEY (`campaignID`),
+  ADD KEY `my_foreign` (`TravelCompany_name`);
 
 --
 -- Tablo için indeksler `hotel`
@@ -352,6 +353,16 @@ ALTER TABLE `hotel`
 --
 ALTER TABLE `hotelreservation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Dökümü yapılmış tablolar için kısıtlamalar
+--
+
+--
+-- Tablo kısıtlamaları `campaign`
+--
+ALTER TABLE `campaign`
+  ADD CONSTRAINT `my_foreign` FOREIGN KEY (`TravelCompany_name`) REFERENCES `travelcompany` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
