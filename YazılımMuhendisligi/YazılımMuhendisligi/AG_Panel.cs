@@ -17,14 +17,17 @@ namespace YazılımMuhendisligi
         public AG_Panel()
         {
             InitializeComponent();
+           
             //dataGridView1.DataSource = Program.ctx.campaign.ToList<campaign>();
             foreach(var i in Program.ctx.campaign.ToList<campaign>())
             {
                 if(!comboBox1.Items.Contains(i.originCity))
                     comboBox1.Items.Add(i.originCity);
-               /* if (!comboBox2.Items.Contains(i.destinationCity))
-                    comboBox2.Items.Add(i.destinationCity);*/
+                /* if (!comboBox2.Items.Contains(i.destinationCity))
+                     comboBox2.Items.Add(i.destinationCity);*/
+        
             }
+             
         }
  
         private void Button1_Click(object sender, EventArgs e)
@@ -49,7 +52,7 @@ namespace YazılımMuhendisligi
             dataGridView1.DataSource = Program.ctx.campaign
                 .Where(x => x.originCity == comboBox1.Text && 
                             x.destinationCity == comboBox2.Text && 
-                            x.date <= dateTimePicker1.Value.Date&&
+                            x.date >= dateTimePicker1.Value.Date&&
                             x.capacity > 0) 
                 .Select(x => x)
                 .ToList<campaign>();
@@ -57,8 +60,11 @@ namespace YazılımMuhendisligi
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             var list = Program.ctx.campaign.Where(x => x.originCity == comboBox1.Text).Select(x => x).ToList();
-            foreach(var i in list)
+           
+            comboBox2.Items.Clear();
+            foreach (var i in list)
             {
                 if (!comboBox2.Items.Contains(i.destinationCity))
                 {
